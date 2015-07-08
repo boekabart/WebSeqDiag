@@ -12,13 +12,20 @@ namespace AutoWSD
     private static void Main(string[] args)
     {
       WebSeqDiag.ApiHelpers.ImageConverter = WSD.ImageHacks.PngHacks.ClipBottomRemoveWhite;
-      var folder = Path.GetFullPath(args.FirstOrDefault(a => !a.StartsWith("-")) ?? Directory.GetCurrentDirectory());
+      var folderOrFile = Path.GetFullPath(args.FirstOrDefault(a => !a.StartsWith("-")) ?? Directory.GetCurrentDirectory());
       var option = args.Any(s => s.Equals("-r")) ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
-      var tasks =
-        Directory.EnumerateFiles(folder, "*.wsd", option)
+
+        var files = File.Exists(folderOrFile)
+            ? new[] {folderOrFile}
+            : Directory.Exists(folderOrFile)
+                ? Directory.EnumerateFiles(folderOrFile, "*.wsd", option)
+                : new string[0];
+
+        var tasks = files
           .Select(path => path.Replace(Directory.GetCurrentDirectory() + "\\", ""))
-          .Select(path => WebSeqDiag.ApiHelpers.CreateOrUpdateImageForEachStyle(path, "png"))
+          .Select(path => WebSeqDiag.ApiHelpers.CreateOrUpdateImageAutoStyle(path, "png"))
           .ToArray();
+
       Task.WhenAll(tasks).Wait();
     }
   }

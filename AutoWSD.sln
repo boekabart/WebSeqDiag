@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoWSD", "AutoWSD\AutoWSD.csproj", "{8373A2F3-18DD-40C9-9196-A2CE43B50568}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSeqDiag", "WebSeqDiag\WebSeqDiag.csproj", "{76EBA737-27A2-4BA3-84FE-5EE3442A6FB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.ImageHacks", "WSD.ImageHacks\WSD.ImageHacks.csproj", "{66C2EE8A-B447-456E-9B6E-737DDAAA4BF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8373A2F3-18DD-40C9-9196-A2CE43B50568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8373A2F3-18DD-40C9-9196-A2CE43B50568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8373A2F3-18DD-40C9-9196-A2CE43B50568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8373A2F3-18DD-40C9-9196-A2CE43B50568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76EBA737-27A2-4BA3-84FE-5EE3442A6FB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76EBA737-27A2-4BA3-84FE-5EE3442A6FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76EBA737-27A2-4BA3-84FE-5EE3442A6FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76EBA737-27A2-4BA3-84FE-5EE3442A6FB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66C2EE8A-B447-456E-9B6E-737DDAAA4BF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C2EE8A-B447-456E-9B6E-737DDAAA4BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C2EE8A-B447-456E-9B6E-737DDAAA4BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C2EE8A-B447-456E-9B6E-737DDAAA4BF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
